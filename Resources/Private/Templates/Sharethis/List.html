@@ -1,0 +1,56 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+	<f:if condition="{settings.globalSharing} == 0 ">
+		<f:if condition="{settings.categories} =='simpleWidget'">
+			<f:then>
+				<f:if condition="{settings.buttonType} == 'horizontal'">
+					<f:then>
+						<span class='st_sharethis_hcount' displayText='ShareThis'></span>
+						<span class='st_facebook_hcount' displayText='Facebook'></span>
+						<span class='st_twitter_hcount' displayText='Tweet'></span>
+						<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+						<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+						<span class='st_email_hcount' displayText='Email'></span>					
+					</f:then>
+					<f:else>
+						<f:if condition="{settings.buttonType} == 'vertical'">
+							<f:then>
+								<span class='st_sharethis_vcount' displayText='ShareThis'></span>
+								<span class='st_facebook_vcount' displayText='Facebook'></span>
+								<span class='st_twitter_vcount' displayText='Tweet'></span>
+								<span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+								<span class='st_pinterest_vcount' displayText='Pinterest'></span>
+								<span class='st_email_vcount' displayText='Email'></span>
+							</f:then>
+							<f:else>
+								<span class='st_sharethis_large' displayText='ShareThis'></span>
+								<span class='st_facebook_large' displayText='Facebook'></span>
+								<span class='st_twitter_large' displayText='Tweet'></span>
+								<span class='st_linkedin_large' displayText='LinkedIn'></span>
+								<span class='st_pinterest_large' displayText='Pinterest'></span>
+								<span class='st_email_large' displayText='Email'></span>
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:then>
+		</f:if>
+	</f:if>
+						
+</f:section>
+
+					

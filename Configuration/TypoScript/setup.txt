@@ -1,0 +1,54 @@
+
+plugin.tx_nssharethis {
+	
+	view{
+		templateRootPath.0 = {$plugin.tx_nssharethis.view.templateRootPath}
+		partialRootPath.0 = {$plugin.tx_nssharethis.view.patialRootPath} 
+		layoutRootPath.0 = {$plugin.tx_nssharethis.view.layoutRootPath}
+	}
+	settings{
+
+		position = {$plugin.tx_nssharethis.settings.position}
+		globalSharing = {$plugin.tx_nssharethis.settings.globalSharing}
+		publisher = {$plugin.tx_nssharethis.settings.publisher}
+		doNotHash = {$plugin.tx_nssharethis.settings.doNotHash}
+		doNotCopy = {$plugin.tx_nssharethis.settings.doNotCopy}
+		hashAddressBar = {$plugin.tx_nssharethis.settings.hashAddressBar}
+		visible = {$plugin.tx_nssharethis.settings.visible}
+		openDelay = {$plugin.tx_nssharethis.settings.openDelay}
+		closeDelay = {$plugin.tx_nssharethis.settings.closeDelay}
+		chicklets = {$plugin.tx_nssharethis.settings.chicklets}
+		items = {$plugin.tx_nssharethis.settings.items}
+		logo = {$plugin.tx_nssharethis.settings.logo}
+		logo_url = {$plugin.tx_nssharethis.settings.logo_url}
+		logo_image = {$plugin.tx_nssharethis.settings.logo_image}
+		height = {$plugin.tx_nssharethis.settings.height}
+		categories = simpleWidget
+		buttonType = simpleButton
+	}
+}
+
+[globalVar = LIT:1 = {$plugin.tx_nssharethis.settings.globalSharing}]
+page.100 >
+page.100 = USER
+page.100{
+	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+	pluginName = Nitsansharethis
+	extensionName = NsSharethis
+	controller = Sharethis
+	vendorName = Nitsan
+	action = list
+	switchableControllerActions{
+		Sharethis{
+			1 = list
+		}
+	}
+	settings =< plugin.tx_nssharethis.settings
+	persistence =< plugin.tx_nssharethis.persistence
+	view =< plugin.tx_nssharethis.view
+}
+[END]
+
+page.includeCSS{
+	100 = EXT:ns_sharethis/Resources/Public/Css/custom.css
+}

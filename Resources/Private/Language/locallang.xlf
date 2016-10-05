@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-03T18:20:05Z" product-name="ns_sharethis">
+		<header/>
+		<body>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis">
+				<source>Sharethis</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.test">
+				<source>Test</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

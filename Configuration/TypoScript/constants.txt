@@ -1,0 +1,58 @@
+
+plugin.tx_nssharethis {
+
+############################
+### CUSTOM SUBCATEGORIES ###
+###########################
+# customsubcategory=190=Website TYPE
+# customsubcategory=200=Configuration
+# customsubcategory=210=Advance Features
+# customsubcategory=220=Enable Logo : It is only visible for Top and Bottom Bar
+# customsubcategory=230=Other
+
+
+	settings{
+		
+		# cat=plugin.tx_nssharethis/200; type=boolean; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.globalSharingEnable
+		globalSharing = 1
+		
+		# cat=plugin.tx_nssharethis/200; type=string; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.publisher
+		publisher = 
+		
+		#cat=plugin.tx_nssharethis/230; type=options[true,false]; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.doNotHash
+		doNotHash = true
+		
+		#cat=plugin.tx_nssharethis/230; type=options[true,false]; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.doNotCopy
+		doNotCopy = false
+		
+		#cat=plugin.tx_nssharethis/230; type=options[true,false]; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.hashAddressBar
+		hashAddressBar = false	
+		
+		# cat=plugin.tx_nssharethis/230; type=int+; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.openDelay
+		openDelay = 5
+		
+		# cat=plugin.tx_nssharethis/230; type=int; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.closeDelay
+		closeDelay = 0
+		
+		# cat=plugin.tx_nssharethis/230; type=options[false,true]; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.visible
+		visible = false	
+		
+		# cat=plugin.tx_nssharethis/200; type=options[left,right,top,bottom]; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.position
+		position = left
+
+		#cat=plugin.tx_nssharethis/210; type=boolean; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.chicklets
+		chicklets = 0
+		
+		#cat=plugin.tx_nssharethis/210; type=string; label= LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.items
+		items = "facebook", "twitter", "linkedin", "pinterest", "email", "sharethis"
+	}
+
+	view {
+		# cat=plugin.tx_nssharethis/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ns_sharethis/Resources/Private/Templates/
+		# cat=plugin.tx_nssharethis/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:ns_sharethis/Resources/Private/Partials/
+		# cat=plugin.tx_nssharethis/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:ns_sharethis/Resources/Private/Layouts/
+	}
+}
